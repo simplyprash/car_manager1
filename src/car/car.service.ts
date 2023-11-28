@@ -1,8 +1,9 @@
-import { HttpException, Injectable } from '@nestjs/common';
+import { HttpException, Injectable, NotFoundException } from '@nestjs/common';
 import { Model} from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { ICar } from './interfaces/car.interface';
 import { carDto } from './car.dto';
+import { carUpdateDto} from './carupdate.dto';
 
 
 @Injectable()
@@ -23,11 +24,12 @@ export class CarService {
     }
 
     public async getCarById(id: number): Promise<carDto> {
-        const car = this.carModel.findOne({ id }).exec();
+        const car = await this.carModel.findOne({ id }).exec();
         if(!car ) {
             throw new HttpException('Not Found', 404);
         }
 
+      
         return car;
     }
 
@@ -40,8 +42,19 @@ export class CarService {
         return 1;
     }
 
-    public async putcarByid(id: number, propertyName: string, propertyValue: string): Promise<any> {
-        
+    public async putcarByid(id: number, carUpdateDto: carUpdateDto): Promise<carUpdateDto> {
+        const filter = {id:id};
+        const existingCar = await this.carModel.findOneAndUpdate(filter, carUpdateDto);
+        if (!existingCar) {
+            throw new NotFoundException(`Car #${id} not found`);
+        }
+        const car = await this.carModel.findOne({ id }).exec();
+        return car;
+    }
+
+    public async getLogoImage(id:number){
+        const car = await this.carModel.findOne({ id }).exec();
+        return car.logo;
     }
 
     
