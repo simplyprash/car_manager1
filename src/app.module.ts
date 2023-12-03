@@ -6,6 +6,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { join } from 'path';
 import { LogoModule } from './logo/logo.module';
 import * as Joi from 'joi';
+import { SchemeModule } from './schemes/scheme.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import * as Joi from 'joi';
       inject: [ConfigService],
     }),
     CarModule,
+    SchemeModule,
 	LogoModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', '/upload/'),
