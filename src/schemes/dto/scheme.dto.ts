@@ -110,6 +110,14 @@ export class SchemeDto extends BaseDto implements Scheme {
     timestampEnd?: number;
 
     /**
+     * logoUrl.
+     *
+     * @example http://demo.com/1/logo
+     */
+    logoUrl?: string;
+
+
+    /**
      * Mapping from {@link Scheme} to {@link SchemeDto}.
      *
      * @param scheme Target asset.
@@ -121,6 +129,7 @@ export class SchemeDto extends BaseDto implements Scheme {
         if (!scheme) {
             return schemeDto;
         }
+        
         schemeDto.assetName = scheme.assetName;
         schemeDto.assetId = scheme.assetId;
         schemeDto.auditor = scheme.auditor;
@@ -135,6 +144,7 @@ export class SchemeDto extends BaseDto implements Scheme {
         schemeDto.energyAmount = scheme.energyAmount;
         schemeDto.timestampStart = scheme.timestampStart;
         schemeDto.timestampEnd = scheme.timestampEnd;
+        schemeDto.logoUrl = scheme.logoUrl;
 
         return schemeDto;
     }

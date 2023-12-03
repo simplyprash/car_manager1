@@ -5,8 +5,8 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { join } from 'path';
 import { LogoModule } from './logo/logo.module';
+import { SchemeModule } from './schemes/module/scheme.module';
 import * as Joi from 'joi';
-import { SchemeModule } from './schemes/scheme.module';
 
 @Module({
   imports: [
@@ -20,7 +20,6 @@ import { SchemeModule } from './schemes/scheme.module';
     }),
     CarModule,
     SchemeModule,
-	LogoModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', '/upload/'),
     	serveStaticOptions: { index: false },

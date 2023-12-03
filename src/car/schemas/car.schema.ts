@@ -3,10 +3,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ObjectType, Field } from '@nestjs/graphql';
 
 export const CarSchema = new mongoose.Schema({
-    id: Number,
-    brand: String,
-    color: String,
-    model: String,
+    schemeName: String,
     logo:  String
 });
 

@@ -6,6 +6,7 @@
  * Fields which can be change rather or on create
  */
 export interface StaticScheme {
+    schemeName?:string,
     assetId?:string
     assetName?:string
     auditor?:string;
@@ -14,6 +15,7 @@ export interface StaticScheme {
     typeOfEnergy?:string;
     maxCapacity?:number;
     dateOfFirstOperation?:number;
+    logoUrl?:string;
 }
 
 /**
@@ -27,6 +29,7 @@ export interface DynamicScheme {
     energyAmount?:number;
     timestampStart?:number;
     timestampEnd?:number;
+
 }
 
 /**

@@ -1,4 +1,4 @@
-import { HttpException, Injectable, NotFoundException } from '@nestjs/common';
+import { HttpException, Injectable, NotFoundException, Req } from '@nestjs/common';
 import { Model} from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { ICar } from './interfaces/car.interface';
@@ -56,6 +56,17 @@ export class CarService {
         const car = await this.carModel.findOne({ id }).exec();
         return car.logo;
     }
+
+    async saveImageAndGetURL(schemeName: string, logo): Promise<string> {
+        // Convert to Base64 and save in MongoDB with schemeName as a key
+        const logoBase64 = `data:${logo.mimetype};base64,${logo.buffer.toString('base64')}`;
+        //const car = await new this.carModel(schemeName, logoBase64);
+
+        const logoUrl = 'http://'+schemeName+'/logo';  
+                      
+        // Generate URL
+        return logoUrl; // URL now uses schemeName
+      }
 
     
 }
