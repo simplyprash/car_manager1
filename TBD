@@ -1,0 +1,55 @@
+Frontend
+Technology Stack: What technologies and frameworks are used in the frontend development (e.g., React, Angular, Vue.js)?
+UI/UX Design Standards: Are there any specific design standards or guidelines followed?
+Responsive Design: How is responsive design handled for different devices and screen sizes?
+Browser Compatibility: Which browsers and versions are supported?
+Performance Optimization: What strategies are in place for frontend performance optimization?
+Testing: What testing frameworks are used for the frontend (e.g., Jest, Mocha)?
+State Management: How is state management handled (e.g., Redux, Context API)?
+Accessibility Compliance: Does the frontend meet accessibility standards (e.g., WCAG)?
+Third-party Integrations: Are there any third-party services integrated (e.g., payment gateways, social media)?
+Frontend Deployment: What is the process for deploying frontend changes?
+Backend
+Languages and Frameworks: What programming languages and frameworks are used (e.g., Node.js, Python, Java)?
+Database Technologies: What databases are in use (e.g., SQL, NoSQL), and how are they structured?
+API Design: What standards are followed for API design and documentation (e.g., REST, GraphQL)?
+Authentication and Authorization: How are authentication and authorization handled?
+Microservices Architecture: If microservices are used, how are they managed and communicated?
+Backend Testing: What testing frameworks and strategies are used for backend code?
+Error Handling: How is error logging and handling managed?
+Data Processing: Are there any specific data processing or computation tasks (e.g., batch processing)?
+Caching Strategies: What caching mechanisms are in place?
+Backend Deployment: How is the backend deployed and updated?
+Data Engineering
+Data Sources: What are the primary data sources for the system?
+ETL Processes: Are there any ETL (Extract, Transform, Load) processes, and how are they managed?
+Data Warehousing: Is a data warehouse used, and what technologies are involved?
+Data Quality: How is data quality maintained and monitored?
+Data Security: What measures are in place to ensure data security and privacy?
+Big Data Technologies: Are any big data technologies in use (e.g., Hadoop, Spark)?
+Real-time Data Processing: Is there a need for real-time data processing?
+Data Backup and Recovery: How is data backup and recovery managed?
+Data Analytics and Reporting: How are data analytics and reporting handled?
+Scalability of Data Systems: How scalable are the data systems in place?
+DevOps
+CI/CD Pipeline: What tools and practices are used for Continuous Integration and Continuous Deployment?
+Infrastructure Management: How is infrastructure provisioned and managed (e.g., cloud services, Kubernetes)?
+Monitoring and Alerting: What systems are in place for monitoring and alerting?
+Version Control: What version control systems are used (e.g., Git)?
+Configuration Management: How is configuration management handled?
+Deployment Strategy: What are the deployment strategies for different environments (e.g., blue-green deployments)?
+Security Practices: What DevOps security practices are in place (e.g., automated security scans)?
+Disaster Recovery: What is the disaster recovery plan?
+Scalability and Load Balancing: How are scalability and load balancing managed?
+Documentation: Is there documentation on the DevOps processes and tools?
+Architecture
+Architectural Style: What architectural style or patterns are followed (e.g., monolithic, microservices)?
+High-level Architecture Diagram: Can you provide a high-level architecture diagram of the system?
+Scalability and Performance: How is scalability and performance considered in the architecture?
+Dependency Management: How are external dependencies and services managed?
+Security Architecture: How is security integrated into the architecture?
+Data Flow Diagrams: Are there data flow diagrams available for major components?
+Fault Tolerance and Redundancy: How is fault tolerance and redundancy built into the system?
+Compliance and Regulations: Are there any specific compliance or regulatory requirements influencing the architecture?
+Third-Party Services: What third-party services are integrated into the architecture?
+Evolution of Architecture: How has the architecture evolved, and what future changes are anticipated?
